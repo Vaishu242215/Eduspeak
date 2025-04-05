@@ -51,15 +51,16 @@ def translate_text(text, target_language="ta"):
         return "Translation failed."
 
 # Function to convert text to speech
-def text_to_speech(text, language="ta"):
-    try:
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as temp_audio:
+    def text_to_speech(text, language="ta"):
+        try:
             tts = gTTS(text=text, lang=language, slow=False)
-            tts.save(temp_audio.name)
-            return temp_audio.name
-    except Exception as e:
-        st.error(f"Error generating speech: {e}")
-        return None
+            temp_audio_path = os.path.join(tempfile.gettempdir(), "output.mp3")
+            tts.save(temp_audio_path)
+            return temp_audio_path
+        except Exception as e:
+            st.error(f"Error generating speech: {e}")
+            return None
+
 
 # Streamlit UI
 def main():
