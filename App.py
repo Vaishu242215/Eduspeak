@@ -1,13 +1,14 @@
 import os
-os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
+os.environ["STREAMLIT_WATCHER_TYPE"] = "none"  # 🔧 Important: Must come first before any other imports
 
 import streamlit as st
-import fitz  # PyMuPDF for PDF extraction 
+import fitz  # PyMuPDF
 from transformers import pipeline
 import torch
 import google.generativeai as genai
 from gtts import gTTS
 import tempfile
+
 
 # Configure Gemini API Key
 genai.configure(api_key="AIzaSyAE8y8q3PERuJxBqKQO2WFojL0m8P2jiHA")
