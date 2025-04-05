@@ -1,6 +1,6 @@
 streamlit
 PyMuPDF
 transformers
-torch
+torch>=2.0.1
 gtts
 google-generativeai
