@@ -4,3 +4,4 @@ transformers
 torch>=2.0.1
 gtts
 google-generativeai
+watchdog==2.1.9
