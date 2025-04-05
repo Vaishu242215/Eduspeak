@@ -8,7 +8,8 @@ import os
 import tempfile
 
 # Configure Gemini API Key
-genai.configure(api_key=st.secrets["gemini_api_key"])
+genai.configure(api_key="AIzaSyAE8y8q3PERuJxBqKQO2WFojL0m8P2jiHA")
+
 
 # Function to extract text from a PDF file
 def extract_text_from_pdf(pdf_file):
