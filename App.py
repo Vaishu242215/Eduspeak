@@ -87,8 +87,11 @@ def main():
             st.subheader("🔊 Generating Speech...")
             audio_file = text_to_speech(translated_text, target_language)
             if audio_file:
-                st.audio(audio_file, format='audio/mp3', start_time=0)
-                st.download_button("⬇ Download Audio", open(audio_file, "rb"), file_name="translated_audio.mp3", mime="audio/mp3")
+                with open(audio_file, "rb") as f:
+                    audio_bytes = f.read()
+                    st.audio(audio_bytes, format="audio/mp3")
+                    st.download_button("⬇ Download Audio", data=audio_bytes, file_name="translated_audio.mp3", mime="audio/mp3")
+
 
 if __name__ == "__main__":
     main()
