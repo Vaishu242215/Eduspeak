@@ -1,3 +1,5 @@
+import os
+os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
 import streamlit as st
 import fitz  # PyMuPDF for PDF extraction 
 from transformers import pipeline
