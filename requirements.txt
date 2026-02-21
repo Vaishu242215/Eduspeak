@@ -1,8 +1,6 @@
 streamlit
-transformers==4.36.2
-torch==2.2.1
-numpy==1.26.4
-gtts
 pymupdf
-google-generativeai
-sentencepiece
+transformers
+torch
+googletrans==4.0.0-rc1
+gtts
