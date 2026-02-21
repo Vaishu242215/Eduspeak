@@ -1,4 +1,4 @@
-# EduSpeak 🎓🗣️
+# EduSpeak 
 Bridging Education and Regional Languages using AI
 
 ## Project Overview
